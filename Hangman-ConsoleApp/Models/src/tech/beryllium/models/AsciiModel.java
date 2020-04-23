@@ -1,3 +1,5 @@
+package tech.beryllium.models;
+
 public class AsciiModel {
     private String asciiArt;
     private int progress;

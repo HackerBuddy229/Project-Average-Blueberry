@@ -1,3 +1,5 @@
+package tech.beryllium.models;
+
 public class ChoiseModel {
     private String choise;
     private int id;

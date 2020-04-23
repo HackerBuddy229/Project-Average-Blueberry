@@ -1,3 +1,5 @@
+package tech.beryllium.models;
+
 public class GameModel {
     public int Turn;
     public String Guesses;
