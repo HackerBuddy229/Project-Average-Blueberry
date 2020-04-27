@@ -2,24 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="10ada15e-5419-4b6f-b457-1fd13eacd1b3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Services/Services.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Services/src/tech/beryllium/services/DataService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hangman-ConsoleApp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Hangman-ConsoleApp.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hangman-Imports/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Hangman-Imports/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hangman-Imports/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Hangman-Imports/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hangman-Imports/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Hangman-Imports/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hangman-Imports/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Hangman-Imports/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hangman-Imports/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Hangman-Imports/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/src/AsciiModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/Models/src/tech/beryllium/models/AsciiModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/src/ChoiseModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/Models/src/tech/beryllium/models/ChoiseModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/src/DataModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/Models/src/tech/beryllium/models/DataModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/src/GameDataModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/Models/src/tech/beryllium/models/GameDataModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/src/GameModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/Models/src/tech/beryllium/models/GameModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Hangman-ConsoleApp/tech/beryllium/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Hangman-ConsoleApp/tech/beryllium/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tech/beryllium/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tech/beryllium/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/src/tech/beryllium/services/DataService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Services/src/tech/beryllium/services/DataService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,6 +72,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
@@ -138,6 +123,8 @@
       <updated>1587624054994</updated>
       <workItem from="1587624058859" duration="2686000" />
       <workItem from="1587652834510" duration="4920000" />
+      <workItem from="1587708281709" duration="3954000" />
+      <workItem from="1587976231705" duration="1316000" />
     </task>
     <servers />
   </component>
@@ -168,10 +155,18 @@
       <screen x="0" y="22" width="1920" height="1058" />
     </state>
     <state width="1874" height="282" key="GridCell.Tab.0.right/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1587659795234" />
-    <state x="639" y="378" key="com.intellij.ide.util.TipDialog" timestamp="1587652838976">
+    <state x="2377" y="186" key="SettingsEditor" timestamp="1587713309482">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2377" y="186" key="SettingsEditor/0.22.1920.1058/1920.0.1920.1080@1920.0.1920.1080" timestamp="1587713309482" />
+    <state x="639" y="378" key="com.intellij.ide.util.TipDialog" timestamp="1587976233984">
       <screen x="0" y="22" width="1920" height="1058" />
     </state>
-    <state x="639" y="378" key="com.intellij.ide.util.TipDialog/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1587652838976" />
+    <state x="639" y="378" key="com.intellij.ide.util.TipDialog/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1587976233984" />
+    <state x="1198" y="299" key="extract.method.dialog" timestamp="1587976745792">
+      <screen x="0" y="22" width="1920" height="1058" />
+    </state>
+    <state x="1198" y="299" key="extract.method.dialog/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1587976745792" />
     <state x="336" y="152" key="new project wizard" timestamp="1587625550846">
       <screen x="0" y="22" width="1920" height="1058" />
     </state>
