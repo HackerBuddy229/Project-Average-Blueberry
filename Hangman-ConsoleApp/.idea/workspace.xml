@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="10ada15e-5419-4b6f-b457-1fd13eacd1b3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/src/tech/beryllium/models/GameDataModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/Models/src/tech/beryllium/models/GameDataModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/src/tech/beryllium/models/GameModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/Models/src/tech/beryllium/models/GameModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/src/tech/beryllium/services/DataService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Services/src/tech/beryllium/services/DataService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Hangman-ConsoleApp/tech/beryllium/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Hangman-ConsoleApp/tech/beryllium/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Models/tech/beryllium/models/GameDataModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Models/tech/beryllium/models/GameDataModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Models/tech/beryllium/models/GameModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Models/tech/beryllium/models/GameModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Services/tech/beryllium/services/DataService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Services/tech/beryllium/services/DataService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tech/beryllium/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tech/beryllium/Main.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$/Hangman-Imports">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$/Hangman-Imports">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Hangman-Imports" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1avlftePxxrnr0il8T15UibEkrO" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="tech.beryllium.Main" />
+      <module name="Hangman-ConsoleApp" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Hangman-Imports [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Hangman-Imports" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="dependencies" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Gradle.Hangman-Imports [dependencies]" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="10ada15e-5419-4b6f-b457-1fd13eacd1b3" name="Default Changelist" comment="" />
+      <created>1587624054994</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587624054994</updated>
+      <workItem from="1587624058859" duration="2686000" />
+      <workItem from="1587652834510" duration="4920000" />
+      <workItem from="1587708281709" duration="3954000" />
+      <workItem from="1587976231705" duration="1316000" />
+      <workItem from="1588227978314" duration="4538000" />
+      <workItem from="1588232871261" duration="1616000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="556" y="213" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588234087709">
+      <screen x="0" y="22" width="1920" height="1058" />
+    </state>
+    <state x="556" y="213" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1588234087709" />
+    <state x="769" y="238" key="#com.intellij.ide.util.MemberChooser" timestamp="1587625056273">
+      <screen x="0" y="22" width="1920" height="1058" />
+    </state>
+    <state x="769" y="238" key="#com.intellij.ide.util.MemberChooser/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1587625056273" />
+    <state x="485" y="129" key="CommitChangelistDialog2" timestamp="1588230042492">
+      <screen x="0" y="22" width="1920" height="1058" />
+    </state>
+    <state x="485" y="129" key="CommitChangelistDialog2/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1588230042492" />
+    <state width="454" height="506" key="DebuggerActiveHint" timestamp="1588233462216">
+      <screen x="0" y="22" width="1920" height="1058" />
+    </state>
+    <state width="454" height="506" key="DebuggerActiveHint/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1588233462216" />
+    <state width="1874" height="348" key="GridCell.Tab.0.bottom" timestamp="1588234487328">
+      <screen x="0" y="22" width="1920" height="1058" />
+    </state>
+    <state width="1874" height="348" key="GridCell.Tab.0.bottom/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1588234487328" />
+    <state width="1874" height="348" key="GridCell.Tab.0.center" timestamp="1588234487328">
+      <screen x="0" y="22" width="1920" height="1058" />
+    </state>
+    <state width="1874" height="348" key="GridCell.Tab.0.center/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1588234487328" />
+    <state width="1874" height="348" key="GridCell.Tab.0.left" timestamp="1588234487327">
+      <screen x="0" y="22" width="1920" height="1058" />
+    </state>
+    <state width="1874" height="348" key="GridCell.Tab.0.left/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1588234487327" />
+    <state width="1874" height="348" key="GridCell.Tab.0.right" timestamp="1588234487328">
+      <screen x="0" y="22" width="1920" height="1058" />
+    </state>
+    <state width="1874" height="348" key="GridCell.Tab.0.right/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1588234487328" />
+    <state width="1874" height="348" key="GridCell.Tab.1.bottom" timestamp="1588234487328">
+      <screen x="0" y="22" width="1920" height="1058" />
+    </state>
+    <state width="1874" height="348" key="GridCell.Tab.1.bottom/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1588234487328" />
+    <state width="1874" height="348" key="GridCell.Tab.1.center" timestamp="1588234487328">
+      <screen x="0" y="22" width="1920" height="1058" />
+    </state>
+    <state width="1874" height="348" key="GridCell.Tab.1.center/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1588234487328" />
+    <state width="1874" height="348" key="GridCell.Tab.1.left" timestamp="1588234487328">
+      <screen x="0" y="22" width="1920" height="1058" />
+    </state>
+    <state width="1874" height="348" key="GridCell.Tab.1.left/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1588234487328" />
+    <state width="1874" height="348" key="GridCell.Tab.1.right" timestamp="1588234487328">
+      <screen x="0" y="22" width="1920" height="1058" />
+    </state>
+    <state width="1874" height="348" key="GridCell.Tab.1.right/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1588234487328" />
+    <state x="2377" y="186" key="SettingsEditor" timestamp="1587713309482">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2377" y="186" key="SettingsEditor/0.22.1920.1058/1920.0.1920.1080@1920.0.1920.1080" timestamp="1587713309482" />
+    <state x="639" y="378" key="com.intellij.ide.util.TipDialog" timestamp="1588232895081">
+      <screen x="0" y="22" width="1920" height="1058" />
+    </state>
+    <state x="639" y="378" key="com.intellij.ide.util.TipDialog/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1588232895081" />
+    <state x="1198" y="299" key="extract.method.dialog" timestamp="1587976745792">
+      <screen x="0" y="22" width="1920" height="1058" />
+    </state>
+    <state x="1198" y="299" key="extract.method.dialog/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1587976745792" />
+    <state x="336" y="152" key="new project wizard" timestamp="1587625550846">
+      <screen x="0" y="22" width="1920" height="1058" />
+    </state>
+    <state x="336" y="152" key="new project wizard/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1587625550846" />
+    <state x="620" y="253" key="run.anything.popup" timestamp="1588228053439">
+      <screen x="0" y="22" width="1920" height="1058" />
+    </state>
+    <state x="620" y="253" key="run.anything.popup/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1588228053439" />
+    <state x="623" y="255" width="672" height="678" key="search.everywhere.popup" timestamp="1588230053121">
+      <screen x="0" y="22" width="1920" height="1058" />
+    </state>
+    <state x="623" y="255" width="672" height="678" key="search.everywhere.popup/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1588230053121" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Services/src/tech/beryllium/services/DataService.java</url>
+          <line>85</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

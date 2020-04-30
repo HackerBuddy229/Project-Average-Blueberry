@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="951a69fd-95dc-4c7d-ac21-229f3ef21ef2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/Project-Average-Blueberry.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1al9pkCErIivhCzclAQNxWgkdFs" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="external.system.task.project.file.to.start" value="$PROJECT_DIR$/HangmanConsole" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/HangmanConsole" />
+  </component>
+  <component name="RunManager">
+    <configuration name="/home/hackerbuddy/repos/Project-Average-Blueberry/HangmanConsole" type="GradleRunConfiguration" factoryName="Gradle" nameIsGenerated="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/HangmanConsole" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" value="" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="951a69fd-95dc-4c7d-ac21-229f3ef21ef2" name="Default Changelist" comment="" />
+      <created>1587299497543</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587299497543</updated>
+      <workItem from="1587299499285" duration="215000" />
+      <workItem from="1587370907171" duration="140000" />
+      <workItem from="1587371393062" duration="261000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2339" y="199" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587371001293">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2339" y="199" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.22.1920.1058/1920.0.1920.1080@1920.0.1920.1080" timestamp="1587371001293" />
+    <state x="2663" y="280" key="FileChooserDialogImpl" timestamp="1587370995383">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="743" y="296" key="FileChooserDialogImpl/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1587299707813" />
+    <state x="2663" y="280" key="FileChooserDialogImpl/0.22.1920.1058/1920.0.1920.1080@1920.0.1920.1080" timestamp="1587370995383" />
+    <state width="1874" height="289" key="GridCell.Tab.0.bottom" timestamp="1587371047049">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1874" height="289" key="GridCell.Tab.0.bottom/0.22.1920.1058/1920.0.1920.1080@1920.0.1920.1080" timestamp="1587371047049" />
+    <state width="1874" height="289" key="GridCell.Tab.0.center" timestamp="1587371047049">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1874" height="289" key="GridCell.Tab.0.center/0.22.1920.1058/1920.0.1920.1080@1920.0.1920.1080" timestamp="1587371047049" />
+    <state width="1874" height="289" key="GridCell.Tab.0.left" timestamp="1587371047049">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1874" height="289" key="GridCell.Tab.0.left/0.22.1920.1058/1920.0.1920.1080@1920.0.1920.1080" timestamp="1587371047049" />
+    <state width="1874" height="289" key="GridCell.Tab.0.right" timestamp="1587371047049">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1874" height="289" key="GridCell.Tab.0.right/0.22.1920.1058/1920.0.1920.1080@1920.0.1920.1080" timestamp="1587371047049" />
+    <state x="639" y="379" key="com.intellij.ide.util.TipDialog" timestamp="1587371531108">
+      <screen x="0" y="22" width="1920" height="1058" />
+    </state>
+    <state x="639" y="379" key="com.intellij.ide.util.TipDialog/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1587371531108" />
+    <state x="336" y="146" key="new project wizard" timestamp="1587371650899">
+      <screen x="0" y="22" width="1920" height="1058" />
+    </state>
+    <state x="336" y="146" key="new project wizard/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1587371650899" />
+  </component>
+</project>

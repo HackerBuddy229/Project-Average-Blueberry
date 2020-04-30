@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="07ffbfb7-21b0-4e6c-a4b7-6349a0eaee7f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../.idea/Project-Average-Blueberry.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1anW51n9QMKqSd3Zrm3wNRW0lo9" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="07ffbfb7-21b0-4e6c-a4b7-6349a0eaee7f" name="Default Changelist" comment="" />
+      <created>1587371651010</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587371651010</updated>
+      <workItem from="1587371656093" duration="1244000" />
+      <workItem from="1587624011080" duration="47000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="713" y="300" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587372893375">
+      <screen x="0" y="22" width="1920" height="1058" />
+    </state>
+    <state x="713" y="300" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1587372893375" />
+    <state x="486" y="472" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1587372892225">
+      <screen x="0" y="22" width="1920" height="1058" />
+    </state>
+    <state x="486" y="472" key="#com.intellij.ide.util.TreeClassChooserDialog/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1587372892225" />
+    <state x="758" y="332" key="chooseDestDirectoryDialog" timestamp="1587372139576">
+      <screen x="0" y="22" width="1920" height="1058" />
+    </state>
+    <state x="758" y="332" key="chooseDestDirectoryDialog/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1587372139576" />
+    <state x="639" y="378" key="com.intellij.ide.util.TipDialog" timestamp="1587624011418">
+      <screen x="0" y="22" width="1920" height="1058" />
+    </state>
+    <state x="639" y="378" key="com.intellij.ide.util.TipDialog/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1587624011418" />
+    <state x="336" y="145" key="new project wizard" timestamp="1587624054752">
+      <screen x="0" y="22" width="1920" height="1058" />
+    </state>
+    <state x="336" y="145" key="new project wizard/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1587624054752" />
+  </component>
+</project>
