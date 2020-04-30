@@ -16,17 +16,18 @@ public class DataService {
     public DataService(int  id) throws IOException {
         //TODO: verify id
         this.id = id;
-        this.getUrl = new URL(String.format("https://beryllium.tech/api/HangmanGameModels/%x", id));
+        this.getUrl = new URL(String.format("https://beryllium.tech/api/HangmanGameModels/%x", this.id));
 
         this.postUrl = new URL("https://beryllium.tech/api/HangmanGameModels");
 
-        this.getHttpURLConnection = (HttpURLConnection) this.getUrl.openConnection();
-        this.getHttpURLConnection.setRequestMethod("GET");
+
 
         this.gson = new Gson();
     }
 
-    public DataService() {
+    public DataService() throws MalformedURLException {
+        this.postUrl = new URL("https://beryllium.tech/api/HangmanGameModels");
+        this.gson = new Gson();
 
     }
 
@@ -34,7 +35,6 @@ public class DataService {
     private int id;
     private URL getUrl;
     private URL postUrl;
-    private HttpURLConnection getHttpURLConnection;
     private Gson gson;
 
     public GameDataModel getGameDataModel() throws IOException {
@@ -52,7 +52,7 @@ public class DataService {
 
         //json
         var output = ToGameDataModel(rawJson);
-        //TODO: impliment type security
+
 
 
         //return
@@ -60,9 +60,13 @@ public class DataService {
     }
 
     private String getJsonByURL() throws IOException {
+        var getHttpURLConnection = (HttpURLConnection) this.getUrl.openConnection();
+        getHttpURLConnection.setRequestMethod("GET");
+
         var stringBuilder = new StringBuilder();
 
-        var buffReader = new BufferedReader(new InputStreamReader(this.getHttpURLConnection.getInputStream()));
+        var buffReader = new BufferedReader(new InputStreamReader(getHttpURLConnection.getInputStream()));
+
         String line;
 
         while ((line = buffReader.readLine()) != null) {
@@ -78,7 +82,12 @@ public class DataService {
         return output;
     }
 
-    private String ToJson(GameModel gameModel) {
+    private String gameModelToJson(GameModel gameModel) {
+        String rawJson = this.gson.toJson(gameModel);
+        return rawJson;
+    }
+
+    private String gameDataModelToJson(GameDataModel gameModel) {
         String rawJson = this.gson.toJson(gameModel);
         return rawJson;
     }
@@ -103,12 +112,14 @@ public class DataService {
             response.append(line);
         }
 
+
+
         return response.toString();
 
     }
 
     private String putJson(String json) throws IOException {
-        var connection = (HttpURLConnection) this.postUrl.openConnection();
+        var connection = (HttpURLConnection) this.getUrl.openConnection();
         connection.setRequestMethod("PUT");
         connection.setRequestProperty("Content-Type", "application/json; utf-8");
         connection.setRequestProperty("Accept", "application/json");
@@ -130,24 +141,31 @@ public class DataService {
         return response.toString();
     }
 
-    private GameDataModel postGameModel(GameModel gameModel) throws IOException {
-        var json = ToJson(gameModel);
+    public GameDataModel postGameModel(GameDataModel gameModel) throws IOException {
+
         //to json
         String response;
         if (id == 0) {
-            response = postJson(json);
+            response = postJson(gameModelToJson(gameModel.toGameModel()));
         } else {
-            response = putJson(json);
+            response = putJson(gameDataModelToJson(gameModel));
         }
         //post
-        GameDataModel returnModel = null;
+        GameDataModel returnModel = new GameDataModel();
         if (response != null || response != "") {
             returnModel = ToGameDataModel(response);
+        }
+
+        if (id == 0) {
+            this.id = returnModel.id;
+            this.getUrl = new URL(String.format("https://beryllium.tech/api/HangmanGameModels/%x", this.id));
         }
         //from json
         return  returnModel;
         //return
 
     }
+
+    //TODO: add finalizer to delete db entry
 
 }
