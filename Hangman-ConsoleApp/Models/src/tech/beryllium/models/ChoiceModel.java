@@ -1,6 +1,6 @@
 package tech.beryllium.models;
 
-public class ChoiseModel {
+public class ChoiceModel {
     private String choise;
     private int id;
 

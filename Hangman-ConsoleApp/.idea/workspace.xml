@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="10ada15e-5419-4b6f-b457-1fd13eacd1b3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/tech/beryllium/views/UtilityView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/src/tech/beryllium/models/GameDataModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/Models/src/tech/beryllium/models/GameDataModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/src/tech/beryllium/models/GameModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/Models/src/tech/beryllium/models/GameModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/src/tech/beryllium/services/DataService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Services/src/tech/beryllium/services/DataService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Hangman-ConsoleApp/tech/beryllium/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Hangman-ConsoleApp/tech/beryllium/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Models/tech/beryllium/models/GameDataModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Models/tech/beryllium/models/GameDataModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Models/tech/beryllium/models/GameModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Models/tech/beryllium/models/GameModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hangman-Imports/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Hangman-Imports/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hangman-Imports/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Hangman-Imports/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/src/tech/beryllium/models/ChoiseModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/Models/src/tech/beryllium/models/ChoiceModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Services/tech/beryllium/services/DataService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Services/tech/beryllium/services/DataService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tech/beryllium/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tech/beryllium/Main.java" afterDir="false" />
     </list>
@@ -66,20 +65,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="IgnoredFileRootStore">
-    <option name="generatedRoots">
-      <set>
-        <option value="$PROJECT_DIR$/.idea" />
-      </set>
-    </option>
-  </component>
   <component name="ProjectId" id="1avlftePxxrnr0il8T15UibEkrO" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -94,9 +85,12 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.15339231" />
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Gradle.Hangman-Imports [dependencies]">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="tech.beryllium.Main" />
       <module name="Hangman-ConsoleApp" />
@@ -128,8 +122,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="Gradle.Hangman-Imports [dependencies]" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -149,11 +143,15 @@
       <workItem from="1587976231705" duration="1316000" />
       <workItem from="1588227978314" duration="4538000" />
       <workItem from="1588232871261" duration="1616000" />
+      <workItem from="1588235081152" duration="1536000" />
+      <workItem from="1588833231860" duration="311000" />
+      <workItem from="1588833562257" duration="302000" />
+      <workItem from="1588833897107" duration="2176000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -175,6 +173,10 @@
       <screen x="0" y="22" width="1920" height="1058" />
     </state>
     <state width="454" height="506" key="DebuggerActiveHint/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1588233462216" />
+    <state x="757" y="384" key="FileChooserDialogImpl" timestamp="1588834273712">
+      <screen x="0" y="22" width="1920" height="1058" />
+    </state>
+    <state x="757" y="384" key="FileChooserDialogImpl/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1588834273712" />
     <state width="1874" height="348" key="GridCell.Tab.0.bottom" timestamp="1588234487328">
       <screen x="0" y="22" width="1920" height="1058" />
     </state>
@@ -207,9 +209,10 @@
       <screen x="0" y="22" width="1920" height="1058" />
     </state>
     <state width="1874" height="348" key="GridCell.Tab.1.right/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1588234487328" />
-    <state x="2377" y="186" key="SettingsEditor" timestamp="1587713309482">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state x="457" y="204" width="1032" height="844" key="SettingsEditor" timestamp="1588834283542">
+      <screen x="0" y="22" width="1920" height="1058" />
     </state>
+    <state x="457" y="204" width="1032" height="844" key="SettingsEditor/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1588834283542" />
     <state x="2377" y="186" key="SettingsEditor/0.22.1920.1058/1920.0.1920.1080@1920.0.1920.1080" timestamp="1587713309482" />
     <state x="639" y="378" key="com.intellij.ide.util.TipDialog" timestamp="1588232895081">
       <screen x="0" y="22" width="1920" height="1058" />
@@ -227,10 +230,10 @@
       <screen x="0" y="22" width="1920" height="1058" />
     </state>
     <state x="620" y="253" key="run.anything.popup/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1588228053439" />
-    <state x="623" y="255" width="672" height="678" key="search.everywhere.popup" timestamp="1588230053121">
+    <state x="623" y="255" width="672" height="678" key="search.everywhere.popup" timestamp="1588833621311">
       <screen x="0" y="22" width="1920" height="1058" />
     </state>
-    <state x="623" y="255" width="672" height="678" key="search.everywhere.popup/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1588230053121" />
+    <state x="623" y="255" width="672" height="678" key="search.everywhere.popup/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1588833621311" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
