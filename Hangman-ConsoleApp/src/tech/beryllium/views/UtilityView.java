@@ -19,7 +19,7 @@ public class UtilityView {
         PresentPrompt(prompt);
 
         for (var choice : options) {
-            PresentPrompt(Integer.toString(choice.getId()) + "." + " " + choice.getChoise());
+            PresentPrompt(Integer.toString(choice.getId()) + ". " + choice.getChoise());
         }
         try {
             var selection = scanner.nextInt();
@@ -34,5 +34,9 @@ public class UtilityView {
 
     public static void PresentPrompt(String prompt) {
         System.out.println(prompt);
+    }
+
+    public static String getInput() {
+        return scanner.nextLine();
     }
 }
