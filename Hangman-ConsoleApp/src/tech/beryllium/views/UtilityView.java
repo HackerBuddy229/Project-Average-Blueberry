@@ -1,6 +1,5 @@
 package tech.beryllium.views;
 
-import org.w3c.dom.ranges.RangeException;
 import tech.beryllium.models.ChoiceModel;
 
 import java.util.InputMismatchException;
@@ -26,10 +25,9 @@ public class UtilityView {
             return options[selection];
         } catch (InputMismatchException exception) {
             return null;
-        } catch (RangeException exception) {
+        } catch (ArrayIndexOutOfBoundsException exception) {
             return new ChoiceModel();
         }
-
     }
 
     public static void PresentPrompt(String prompt) {
