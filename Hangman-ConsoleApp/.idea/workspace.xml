@@ -2,32 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="10ada15e-5419-4b6f-b457-1fd13eacd1b3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Services/src/tech/beryllium/services/AsciiService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Services/src/tech/beryllium/services/AsciiServiceShould.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/apiguardian-api-1.0.0-javadoc.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/apiguardian-api-1.0.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/hamcrest-core-1.3-javadoc.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/hamcrest-core-1.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/junit-4.12-javadoc.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/junit-4.12.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/junit-jupiter-5.4.2-javadoc.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/junit-jupiter-5.4.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/junit-jupiter-api-5.4.2-javadoc.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/junit-jupiter-api-5.4.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/junit-jupiter-engine-5.4.2-javadoc.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/junit-jupiter-engine-5.4.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/junit-jupiter-params-5.4.2-javadoc.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/junit-jupiter-params-5.4.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/junit-platform-commons-1.4.2-javadoc.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/junit-platform-commons-1.4.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/junit-platform-engine-1.4.2-javadoc.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/junit-platform-engine-1.4.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/opentest4j-1.1.1-javadoc.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/opentest4j-1.1.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Services/src/tech/beryllium/services/DataModelBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Services/src/tech/beryllium/services/UtilityService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/src/tech/beryllium/models/AsciiModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/Models/src/tech/beryllium/models/AsciiModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Services.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Services.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tech/beryllium/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tech/beryllium/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/src/tech/beryllium/models/DataModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/Models/src/tech/beryllium/models/DataModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tech/beryllium/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tech/beryllium/GameController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,8 +55,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -192,8 +171,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.AsciiServiceShould.getAsciiByProgression" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.AsciiServiceShould" />
         <item itemvalue="Gradle.Hangman-Imports [dependencies]" />
       </list>
@@ -219,7 +198,8 @@
       <workItem from="1588833231860" duration="311000" />
       <workItem from="1588833562257" duration="302000" />
       <workItem from="1588833897107" duration="7349000" />
-      <workItem from="1588919477504" duration="3649000" />
+      <workItem from="1588919477504" duration="3986000" />
+      <workItem from="1589297856657" duration="4080000" />
     </task>
     <servers />
   </component>
@@ -234,10 +214,10 @@
       <screen x="0" y="22" width="1920" height="1058" />
     </state>
     <state x="556" y="213" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1588836387872" />
-    <state x="769" y="238" key="#com.intellij.ide.util.MemberChooser" timestamp="1587625056273">
+    <state x="769" y="238" key="#com.intellij.ide.util.MemberChooser" timestamp="1589298495757">
       <screen x="0" y="22" width="1920" height="1058" />
     </state>
-    <state x="769" y="238" key="#com.intellij.ide.util.MemberChooser/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1587625056273" />
+    <state x="769" y="238" key="#com.intellij.ide.util.MemberChooser/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1589298495757" />
     <state x="485" y="129" key="CommitChangelistDialog2" timestamp="1588230042492">
       <screen x="0" y="22" width="1920" height="1058" />
     </state>
@@ -250,38 +230,38 @@
       <screen x="0" y="22" width="1920" height="1058" />
     </state>
     <state x="757" y="384" key="FileChooserDialogImpl/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1588834273712" />
-    <state width="1874" height="282" key="GridCell.Tab.0.bottom" timestamp="1588923125772">
+    <state width="1874" height="282" key="GridCell.Tab.0.bottom" timestamp="1589301861025">
       <screen x="0" y="22" width="1920" height="1058" />
     </state>
-    <state width="1874" height="282" key="GridCell.Tab.0.bottom/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1588923125772" />
-    <state width="1874" height="282" key="GridCell.Tab.0.center" timestamp="1588923125772">
+    <state width="1874" height="282" key="GridCell.Tab.0.bottom/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1589301861025" />
+    <state width="1874" height="282" key="GridCell.Tab.0.center" timestamp="1589301861024">
       <screen x="0" y="22" width="1920" height="1058" />
     </state>
-    <state width="1874" height="282" key="GridCell.Tab.0.center/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1588923125772" />
-    <state width="1874" height="282" key="GridCell.Tab.0.left" timestamp="1588923125772">
+    <state width="1874" height="282" key="GridCell.Tab.0.center/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1589301861024" />
+    <state width="1874" height="282" key="GridCell.Tab.0.left" timestamp="1589301861024">
       <screen x="0" y="22" width="1920" height="1058" />
     </state>
-    <state width="1874" height="282" key="GridCell.Tab.0.left/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1588923125772" />
-    <state width="1874" height="282" key="GridCell.Tab.0.right" timestamp="1588923125772">
+    <state width="1874" height="282" key="GridCell.Tab.0.left/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1589301861024" />
+    <state width="1874" height="282" key="GridCell.Tab.0.right" timestamp="1589301861024">
       <screen x="0" y="22" width="1920" height="1058" />
     </state>
-    <state width="1874" height="282" key="GridCell.Tab.0.right/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1588923125772" />
-    <state width="1874" height="348" key="GridCell.Tab.1.bottom" timestamp="1588923100769">
+    <state width="1874" height="282" key="GridCell.Tab.0.right/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1589301861024" />
+    <state width="1874" height="348" key="GridCell.Tab.1.bottom" timestamp="1588923468070">
       <screen x="0" y="22" width="1920" height="1058" />
     </state>
-    <state width="1874" height="348" key="GridCell.Tab.1.bottom/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1588923100769" />
-    <state width="1874" height="348" key="GridCell.Tab.1.center" timestamp="1588923100768">
+    <state width="1874" height="348" key="GridCell.Tab.1.bottom/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1588923468070" />
+    <state width="1874" height="348" key="GridCell.Tab.1.center" timestamp="1588923468070">
       <screen x="0" y="22" width="1920" height="1058" />
     </state>
-    <state width="1874" height="348" key="GridCell.Tab.1.center/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1588923100768" />
-    <state width="1874" height="348" key="GridCell.Tab.1.left" timestamp="1588923100768">
+    <state width="1874" height="348" key="GridCell.Tab.1.center/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1588923468070" />
+    <state width="1874" height="348" key="GridCell.Tab.1.left" timestamp="1588923468070">
       <screen x="0" y="22" width="1920" height="1058" />
     </state>
-    <state width="1874" height="348" key="GridCell.Tab.1.left/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1588923100768" />
-    <state width="1874" height="348" key="GridCell.Tab.1.right" timestamp="1588923100768">
+    <state width="1874" height="348" key="GridCell.Tab.1.left/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1588923468070" />
+    <state width="1874" height="348" key="GridCell.Tab.1.right" timestamp="1588923468070">
       <screen x="0" y="22" width="1920" height="1058" />
     </state>
-    <state width="1874" height="348" key="GridCell.Tab.1.right/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1588923100768" />
+    <state width="1874" height="348" key="GridCell.Tab.1.right/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1588923468070" />
     <state x="457" y="204" width="1032" height="844" key="SettingsEditor" timestamp="1588834283542">
       <screen x="0" y="22" width="1920" height="1058" />
     </state>
@@ -307,24 +287,13 @@
       <screen x="0" y="22" width="1920" height="1058" />
     </state>
     <state x="336" y="152" width="1247" height="830" key="new project wizard/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1588922088523" />
-    <state x="620" y="253" key="run.anything.popup" timestamp="1588228053439">
+    <state x="620" y="253" key="run.anything.popup" timestamp="1589297877367">
       <screen x="0" y="22" width="1920" height="1058" />
     </state>
-    <state x="620" y="253" key="run.anything.popup/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1588228053439" />
-    <state x="623" y="255" width="672" height="678" key="search.everywhere.popup" timestamp="1588922644717">
+    <state x="620" y="253" key="run.anything.popup/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1589297877367" />
+    <state x="623" y="255" width="672" height="678" key="search.everywhere.popup" timestamp="1589299340388">
       <screen x="0" y="22" width="1920" height="1058" />
     </state>
-    <state x="623" y="255" width="672" height="678" key="search.everywhere.popup/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1588922644717" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Services/src/tech/beryllium/services/DataService.java</url>
-          <line>85</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <state x="623" y="255" width="672" height="678" key="search.everywhere.popup/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1589299340388" />
   </component>
 </project>
