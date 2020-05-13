@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="10ada15e-5419-4b6f-b457-1fd13eacd1b3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Services/src/tech/beryllium/services/DataModelBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Services/src/tech/beryllium/services/UtilityService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Services/src/tech/beryllium/services/GameEntityServiceShould.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tech/beryllium/Hangman.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/src/tech/beryllium/models/DataModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/Models/src/tech/beryllium/models/DataModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tech/beryllium/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tech/beryllium/GameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/src/tech/beryllium/services/GameEntityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Services/src/tech/beryllium/services/GameEntityService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +102,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.GameEntityServiceShould.getGameEntityByDifficulty">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="tech.beryllium.Main" />
       <module name="Hangman-ConsoleApp" />
@@ -163,14 +162,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="GameEntityServiceShould.getGameEntityByDifficulty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Services" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tech.beryllium.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tech.beryllium.services" />
+      <option name="MAIN_CLASS_NAME" value="tech.beryllium.services.GameEntityServiceShould" />
+      <option name="METHOD_NAME" value="getGameEntityByDifficulty" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.Main" />
       <item itemvalue="Gradle.Hangman-Imports [dependencies]" />
       <item itemvalue="JUnit.AsciiServiceShould" />
       <item itemvalue="JUnit.AsciiServiceShould.getAsciiByProgression" />
+      <item itemvalue="JUnit.GameEntityServiceShould.getGameEntityByDifficulty" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.GameEntityServiceShould.getGameEntityByDifficulty" />
         <item itemvalue="JUnit.AsciiServiceShould.getAsciiByProgression" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.AsciiServiceShould" />
@@ -199,7 +216,8 @@
       <workItem from="1588833562257" duration="302000" />
       <workItem from="1588833897107" duration="7349000" />
       <workItem from="1588919477504" duration="3986000" />
-      <workItem from="1589297856657" duration="4080000" />
+      <workItem from="1589297856657" duration="5290000" />
+      <workItem from="1589363604277" duration="2061000" />
     </task>
     <servers />
   </component>
@@ -230,22 +248,22 @@
       <screen x="0" y="22" width="1920" height="1058" />
     </state>
     <state x="757" y="384" key="FileChooserDialogImpl/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1588834273712" />
-    <state width="1874" height="282" key="GridCell.Tab.0.bottom" timestamp="1589301861025">
+    <state width="1874" height="282" key="GridCell.Tab.0.bottom" timestamp="1589365664596">
       <screen x="0" y="22" width="1920" height="1058" />
     </state>
-    <state width="1874" height="282" key="GridCell.Tab.0.bottom/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1589301861025" />
-    <state width="1874" height="282" key="GridCell.Tab.0.center" timestamp="1589301861024">
+    <state width="1874" height="282" key="GridCell.Tab.0.bottom/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1589365664596" />
+    <state width="1874" height="282" key="GridCell.Tab.0.center" timestamp="1589365664596">
       <screen x="0" y="22" width="1920" height="1058" />
     </state>
-    <state width="1874" height="282" key="GridCell.Tab.0.center/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1589301861024" />
-    <state width="1874" height="282" key="GridCell.Tab.0.left" timestamp="1589301861024">
+    <state width="1874" height="282" key="GridCell.Tab.0.center/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1589365664596" />
+    <state width="1874" height="282" key="GridCell.Tab.0.left" timestamp="1589365664596">
       <screen x="0" y="22" width="1920" height="1058" />
     </state>
-    <state width="1874" height="282" key="GridCell.Tab.0.left/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1589301861024" />
-    <state width="1874" height="282" key="GridCell.Tab.0.right" timestamp="1589301861024">
+    <state width="1874" height="282" key="GridCell.Tab.0.left/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1589365664596" />
+    <state width="1874" height="282" key="GridCell.Tab.0.right" timestamp="1589365664596">
       <screen x="0" y="22" width="1920" height="1058" />
     </state>
-    <state width="1874" height="282" key="GridCell.Tab.0.right/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1589301861024" />
+    <state width="1874" height="282" key="GridCell.Tab.0.right/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1589365664596" />
     <state width="1874" height="348" key="GridCell.Tab.1.bottom" timestamp="1588923468070">
       <screen x="0" y="22" width="1920" height="1058" />
     </state>
@@ -275,10 +293,10 @@
       <screen x="0" y="22" width="1920" height="1058" />
     </state>
     <state x="664" y="446" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1588922618173" />
-    <state x="735" y="357" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1588922696688">
+    <state x="735" y="357" width="450" height="359" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1589364839387">
       <screen x="0" y="22" width="1920" height="1058" />
     </state>
-    <state x="735" y="357" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1588922696688" />
+    <state x="735" y="357" width="450" height="359" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1589364839387" />
     <state x="1198" y="299" key="extract.method.dialog" timestamp="1587976745792">
       <screen x="0" y="22" width="1920" height="1058" />
     </state>
@@ -291,9 +309,9 @@
       <screen x="0" y="22" width="1920" height="1058" />
     </state>
     <state x="620" y="253" key="run.anything.popup/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1589297877367" />
-    <state x="623" y="255" width="672" height="678" key="search.everywhere.popup" timestamp="1589299340388">
+    <state x="623" y="255" width="672" height="678" key="search.everywhere.popup" timestamp="1589363935390">
       <screen x="0" y="22" width="1920" height="1058" />
     </state>
-    <state x="623" y="255" width="672" height="678" key="search.everywhere.popup/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1589299340388" />
+    <state x="623" y="255" width="672" height="678" key="search.everywhere.popup/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1589363935390" />
   </component>
 </project>
