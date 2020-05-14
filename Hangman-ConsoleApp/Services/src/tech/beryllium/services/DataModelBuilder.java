@@ -53,6 +53,7 @@ public class DataModelBuilder {
         sortGuesses(this._gameDataModel);
         calculateGuessNumber(this._gameDataModel);
         createRepresentativeString(this._dataModel, this._gameDataModel);
+        this._dataModel.progression = this._dataModel.wrongGuesses.length - 1;
     }
 
     private void calculateGuessNumber(GameDataModel gameDataModel) {

@@ -5,5 +5,6 @@ public class DataModel {
     public int guess;
     public Character[] correctGuesses;
     public Character[] wrongGuesses;
+    public int progression;
 
 }

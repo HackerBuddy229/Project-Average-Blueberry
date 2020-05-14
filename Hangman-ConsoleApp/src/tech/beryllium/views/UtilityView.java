@@ -26,7 +26,7 @@ public class UtilityView {
         } catch (InputMismatchException exception) {
             return null;
         } catch (ArrayIndexOutOfBoundsException exception) {
-            return new ChoiceModel();
+            return null;
         }
     }
 
@@ -34,7 +34,11 @@ public class UtilityView {
         System.out.println(prompt);
     }
 
-    public static String getInput() {
+    public String getInput() {
         return scanner.nextLine();
+    }
+
+    public void awaitInput() {
+        scanner.nextLine();
     }
 }

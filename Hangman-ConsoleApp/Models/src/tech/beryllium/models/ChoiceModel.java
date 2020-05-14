@@ -4,6 +4,11 @@ public class ChoiceModel {
     private String choise;
     private int id;
 
+    public ChoiceModel(String choise, int id) {
+        this.choise = choise;
+        this.id = id;
+    }
+
     public String getChoise() {
         return choise;
     }
