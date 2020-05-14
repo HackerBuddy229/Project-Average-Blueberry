@@ -59,7 +59,56 @@ public class Hangman {
         }
         return false;
     }
-    
+
+    public GameDataModel nextTurn(char guess, boolean isHost) throws IOException {
+        this.gameDataModel.guesses = this.gameDataModel.guesses + "," + guess;
+        if (isHost) {
+            this.gameDataModel.turn = 2;
+        } else {
+            this.gameDataModel.turn = 1;
+        }
+
+        if (hasWon()) {
+            this.gameDataModel.hasWon = true;
+            if (isHost) {
+                this.gameDataModel.winner = 1;
+            } else {
+                this.gameDataModel.winner = 2;
+            }
+        }
+
+        this._dataService.postGameModel(this.gameDataModel);
+        return this.gameDataModel;
+
+    }
+
+    public void timeDeath(boolean isHost) throws IOException {
+        this.gameDataModel.hasWon = true;
+        this.gameDataModel.winner = 3;
+        if (isHost) {
+            this.gameDataModel.turn = 2;
+        } else {
+            this.gameDataModel.turn = 1;
+        }
+
+        this._dataService.postGameModel(this.gameDataModel);
+    }
+
+    private boolean hasWon() {
+        for (var letter : this.gameDataModel.correctWord.toUpperCase().toCharArray()) {
+            var contains = false;
+            for (var guess : this.gameDataModel.guesses.split(",")) {
+                if (letter == guess.charAt(0)) {
+                    contains = true;
+                }
+            }
+            if (!contains) {
+                return false;
+            }
+        }
+        return true;
+    }
+
     private static GameDataModel initNewDataModel(GameDataModel gameDataModel) {
         gameDataModel.turn = 3;
         gameDataModel.guesses = "";

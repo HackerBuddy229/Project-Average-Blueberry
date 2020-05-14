@@ -1,9 +1,12 @@
 package tech.beryllium;
 
 import tech.beryllium.models.ChoiceModel;
+import tech.beryllium.models.DataModel;
 import tech.beryllium.models.GameDataModel;
+import tech.beryllium.services.AsciiService;
 import tech.beryllium.services.DataService;
 import tech.beryllium.services.GameEntityService;
+import tech.beryllium.views.GameView;
 import tech.beryllium.views.UtilityView;
 
 import java.io.IOException;
@@ -11,23 +14,23 @@ import java.util.Random;
 
 public class GameController {
     private DataService _dataService;
-    private UtilityView _utilityView;
+    private GameView _gameView;
 
-    private boolean host;
-    private int hostDesignation;
+    private boolean isHost;
+    private int clientDesignation;
 
     private GameDataModel currentGameState;
 
     public GameController() {
-        this._utilityView = new UtilityView();
+        this._gameView = new GameView();
     }
 
 
 
     public void setupGame() throws Exception {
         if (doJoinGame()) {
-            this.host = false;
-            this.hostDesignation = 2;
+            this.isHost = false;
+            this.clientDesignation = 2;
             int id = fetchId();
             this._dataService = new DataService(id);
             var game = Hangman.joinGame(this._dataService);
@@ -37,8 +40,8 @@ public class GameController {
             this.currentGameState = game;
             return;
         }
-        this.host = true;
-        this.hostDesignation = 1;
+        this.isHost = true;
+        this.clientDesignation = 1;
 
         var difficulty = fetchDifficulty();
         this._dataService = new DataService();
@@ -48,14 +51,48 @@ public class GameController {
     }
 
     public void startGame() throws IOException {
-        while(this.currentGameState.hasWon == false) {
-            if(Hangman.isClientTurn(this._dataService, this.hostDesignation)) {
-                var hangman = new Hangman(this._dataService);
+        while(!this.currentGameState.hasWon) {
+            if(Hangman.isClientTurn(this._dataService, this.clientDesignation)) {
 
+                var hangman = new Hangman(this._dataService);
+                PresentRound(hangman.getDataModel());
+
+                if (hangman.getDataModel().progression > 7) {
+                    hangman.timeDeath(isHost);
+                    GameView.PresentPrompt("You Lose!");
+                    break;
+                }
+
+                var guess = fetchGuess();
+                this.currentGameState = hangman.nextTurn(guess, this.isHost);
+
+                if (this.currentGameState.hasWon && this.currentGameState.winner == clientDesignation) {
+                    GameView.PresentPrompt("Congratulations! you have won");
+                    break;
+                } else if (this.currentGameState.hasWon && this.currentGameState.winner != clientDesignation) {
+                    GameView.PresentPrompt("You Lose!");
+                    break;
+                }
             }
             UtilityView.PresentPrompt("Press enter to refresh");
-            this._utilityView.awaitInput();
+            this._gameView.awaitInput();
         }
+    }
+
+    private char fetchGuess() {
+        GameView.PresentPrompt("Please enter your guess and press enter:");
+        String raw;
+        do {
+            raw = this._gameView.getInput();
+        } while (raw != null);
+
+        return raw.toUpperCase().charAt(0);
+    }
+
+    private void PresentRound(DataModel dataModel) {
+        GameView.printAscii(new AsciiService()
+                            .getAsciiByProgression(dataModel.progression));
+        GameView.printRoundStats(dataModel);
     }
 
     private int fetchDifficulty() {
@@ -67,7 +104,7 @@ public class GameController {
         };
         ChoiceModel choice = null;
         do {
-          choice = this._utilityView.GetChoice(options, "choose you desired difficulty");
+          choice = this._gameView.GetChoice(options, "choose you desired difficulty");
         } while (choice != null);
 
         return choice.getId();
@@ -75,12 +112,12 @@ public class GameController {
 
     private int fetchId() {
         var prompt = "Please enter game id:";
-        this._utilityView.PresentPrompt(prompt);
+        this._gameView.PresentPrompt(prompt);
 
         int response;
         do {
             try {
-                var initInput = this._utilityView.getInput();
+                var initInput = this._gameView.getInput();
                 response = Integer.parseInt(initInput);
             } catch (Exception exception) {
                 response = 0;
@@ -99,7 +136,7 @@ public class GameController {
 
         ChoiceModel input;
         do {
-            input = _utilityView.GetChoice(choices, prompt);
+            input = _gameView.GetChoice(choices, prompt);
         } while (input == null);
 
         if (input.getId() == 0) {

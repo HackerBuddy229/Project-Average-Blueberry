@@ -3,15 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="10ada15e-5419-4b6f-b457-1fd13eacd1b3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/src/tech/beryllium/models/ChoiceModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/Models/src/tech/beryllium/models/ChoiceModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/src/tech/beryllium/models/DataModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/Models/src/tech/beryllium/models/DataModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/src/tech/beryllium/services/DataModelBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/Services/src/tech/beryllium/services/DataModelBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Hangman-ConsoleApp/tech/beryllium/GameController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Hangman-ConsoleApp/tech/beryllium/GameController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Hangman-ConsoleApp/tech/beryllium/views/UtilityView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Hangman-ConsoleApp/tech/beryllium/views/UtilityView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Models/tech/beryllium/models/ChoiceModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Models/tech/beryllium/models/ChoiceModel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tech/beryllium/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tech/beryllium/GameController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tech/beryllium/Hangman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tech/beryllium/Hangman.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tech/beryllium/views/UtilityView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tech/beryllium/views/UtilityView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tech/beryllium/views/GameView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tech/beryllium/views/GameView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -224,7 +218,7 @@
       <workItem from="1588919477504" duration="3986000" />
       <workItem from="1589297856657" duration="5290000" />
       <workItem from="1589363604277" duration="2061000" />
-      <workItem from="1589437843772" duration="13847000" />
+      <workItem from="1589437843772" duration="16969000" />
     </task>
     <servers />
   </component>
