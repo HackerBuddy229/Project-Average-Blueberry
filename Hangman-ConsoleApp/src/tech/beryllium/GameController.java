@@ -37,7 +37,9 @@ public class GameController {
             if (game == null) {
                 throw new Exception("id was wrong");
             }
+
             this.currentGameState = game;
+            GameView.PresentPrompt("your id is:" + this.currentGameState.id);
             return;
         }
         this.isHost = true;
@@ -48,6 +50,7 @@ public class GameController {
 
         var GameData = Hangman.createGame(_dataService, new GameEntityService(new Random()), difficulty);
         this.currentGameState = GameData;
+        GameView.PresentPrompt("your id is:" + this.currentGameState.id);
     }
 
     public void startGame() throws IOException {
