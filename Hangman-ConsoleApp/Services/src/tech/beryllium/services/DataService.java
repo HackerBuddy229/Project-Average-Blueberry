@@ -16,7 +16,7 @@ public class DataService {
     public DataService(int  id) throws IOException {
         //TODO: verify id
         this.id = id;
-        this.getUrl = new URL(String.format("https://beryllium.tech/api/HangmanGameModels/%x", this.id));
+        this.getUrl = new URL(String.format("https://beryllium.tech/api/HangmanGameModels/" + this.id));
 
         this.postUrl = new URL("https://beryllium.tech/api/HangmanGameModels");
 
@@ -158,7 +158,7 @@ public class DataService {
 
         if (id == 0) {
             this.id = returnModel.id;
-            this.getUrl = new URL(String.format("https://beryllium.tech/api/HangmanGameModels/%x", this.id));
+            this.getUrl = new URL(String.format("https://beryllium.tech/api/HangmanGameModels/" + this.id));
         }
         //from json
         return  returnModel;

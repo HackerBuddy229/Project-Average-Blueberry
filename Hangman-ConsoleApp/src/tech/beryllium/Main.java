@@ -8,25 +8,26 @@ import java.io.IOException;
 public class Main {
 
     public static void main(String[] args) {
-        var model = new GameDataModel();
-            model.id = 25;
-            model.correctWord = "hi";
-            model.turn = 1;
-            model.guesses = "b,d,e";
-            model.hasWon = true;
-            model.winner = 0;
-            model.key = "asdgff";
-
-
         try {
-            var dataService = new DataService();
-
-            var returnModel = dataService.postGameModel(model);
-            System.out.println(returnModel.key);
-
-        } catch (IOException e) {
-            e.printStackTrace();
+            playGame();
+        } catch (IOException ioException) {
+            displayNetworkError(ioException.getMessage());
+        } catch (Exception exception) {
+            displayGeneralError(exception.getMessage());
         }
+    }
 
+    private static void playGame() throws Exception {
+        var gameController = new GameController();
+        gameController.setupGame();
+        gameController.startGame();
+    }
+
+    private static void displayNetworkError(String error) {
+        System.out.println("you have experienced a network error:" + error);
+    }
+
+    private static void displayGeneralError(String error) {
+        System.out.println("an error has occurred:" + error);
     }
 }

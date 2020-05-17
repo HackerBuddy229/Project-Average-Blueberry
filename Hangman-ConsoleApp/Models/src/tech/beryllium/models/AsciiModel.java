@@ -8,8 +8,9 @@ public class AsciiModel {
         return asciiArt;
     }
 
-    public void setAsciiArt(String asciiArt) {
+    public AsciiModel setAsciiArt(String asciiArt) {
         this.asciiArt = asciiArt;
+        return null;
     }
 
     public int getProgress() {
