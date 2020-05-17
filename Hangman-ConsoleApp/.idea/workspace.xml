@@ -8,9 +8,8 @@
   <component name="ChangeListManager">
     <list default="true" id="10ada15e-5419-4b6f-b457-1fd13eacd1b3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/src/tech/beryllium/services/DataService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Services/src/tech/beryllium/services/DataService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/src/tech/beryllium/services/GameEntityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Services/src/tech/beryllium/services/GameEntityService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/src/tech/beryllium/services/UtilityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Services/src/tech/beryllium/services/UtilityService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tech/beryllium/views/GameView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tech/beryllium/views/GameView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tech/beryllium/views/UtilityView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tech/beryllium/views/UtilityView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -224,7 +223,7 @@
       <workItem from="1589363604277" duration="2061000" />
       <workItem from="1589437843772" duration="21791000" />
       <workItem from="1589556195751" duration="22000" />
-      <workItem from="1589556230570" duration="16631000" />
+      <workItem from="1589556230570" duration="17659000" />
     </task>
     <servers />
   </component>
