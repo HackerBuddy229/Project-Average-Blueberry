@@ -21,12 +21,19 @@ public class GameController {
 
     private GameDataModel currentGameState;
 
+    /**
+     * instantiates a new instance with a global GameView
+     */
     public GameController() {
         this._gameView = new GameView();
     }
 
 
-
+    /**
+     * querys the player about minimal information and the continues to set up a minimal game controller ready for the
+     * startGame() method call
+     * @throws Exception see nested javadoc
+     */
     public void setupGame() throws Exception {
         if (doJoinGame()) {
             this.isHost = false;
@@ -53,6 +60,10 @@ public class GameController {
         GameView.PresentPrompt("your id is:" + this.currentGameState.id);
     }
 
+    /**
+     * primary execution chain starting and maintaining the game until finished
+     * @throws IOException general network errors
+     */
     public void startGame() throws IOException {
         while(!this.currentGameState.hasWon) {
             if(Hangman.isClientTurn(this._dataService, this.clientDesignation)) {
@@ -84,6 +95,10 @@ public class GameController {
         }
     }
 
+    /**
+     * query and accepts the players guess
+     * @return secured guess as char
+     */
     private char fetchGuess() {
         GameView.PresentPrompt("Please enter your guess and press enter:");
         String raw;
@@ -94,12 +109,20 @@ public class GameController {
         return raw.toUpperCase().charAt(0);
     }
 
+    /**
+     * Uses the dataModel provided by hangman to present relevant information to the player
+     * @param dataModel the datamodel extracted from hangman
+     */
     private void PresentRound(DataModel dataModel) {
         GameView.printAscii(new AsciiService()
                             .getAsciiByProgression(dataModel.progression));
         GameView.printRoundStats(dataModel);
     }
 
+    /**
+     * query and accepts the players requested difficulty
+     * @return secured difficulty represented by an integer
+     */
     private int fetchDifficulty() {
         var prompt = "Please choose your difficulty";
         var options = new ChoiceModel[] {
@@ -115,6 +138,10 @@ public class GameController {
         return choice.getId();
     }
 
+    /**
+     * query and accepts the players session id
+     * @return the id as an integer
+     */
     private int fetchId() {
         var prompt = "Please enter game id:";
         this._gameView.PresentPrompt(prompt);
@@ -132,6 +159,10 @@ public class GameController {
         return response;
     }
 
+    /**
+     * querys the player weather they want to join a game
+     * @return secured boolean representing the claim
+     */
     private boolean doJoinGame() {
         var choices = new ChoiceModel[] {
           new ChoiceModel("join", 0),
