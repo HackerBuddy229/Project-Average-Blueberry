@@ -1,30 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Hangman-ConsoleApp:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="10ada15e-5419-4b6f-b457-1fd13eacd1b3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Hangman-imports/settings.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Hangman_ConsoleApp_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Models/src/META-INF/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hangman-Imports/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hangman-Imports/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hangman-Imports/.gradle/5.2.1/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hangman-Imports/.gradle/5.2.1/fileContent/fileContent.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hangman-Imports/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hangman-Imports/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hangman-Imports/.gradle/5.2.1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hangman-Imports/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hangman-Imports/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hangman-Imports/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hangman-Imports/.gradle/vcs-1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hangman-Imports/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Hangman-imports/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hangman-Imports/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hangman-Imports/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hangman-Imports/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hangman-Imports/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hangman-Imports/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/src/tech/beryllium/services/AsciiService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Services/src/tech/beryllium/services/AsciiService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/src/tech/beryllium/services/DataModelBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/Services/src/tech/beryllium/services/DataModelBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/src/tech/beryllium/services/DataService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Services/src/tech/beryllium/services/DataService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Hangman-ConsoleApp/tech/beryllium/GameController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Hangman-ConsoleApp/tech/beryllium/GameController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Hangman-ConsoleApp/tech/beryllium/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Hangman-ConsoleApp/tech/beryllium/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tech/beryllium/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tech/beryllium/GameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tech/beryllium/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tech/beryllium/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tech/beryllium/Hangman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tech/beryllium/Hangman.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tech/beryllium/views/GameView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tech/beryllium/views/GameView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +103,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.15339231" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
@@ -236,7 +229,9 @@
       <workItem from="1588919477504" duration="3986000" />
       <workItem from="1589297856657" duration="5290000" />
       <workItem from="1589363604277" duration="2061000" />
-      <workItem from="1589437843772" duration="19631000" />
+      <workItem from="1589437843772" duration="21791000" />
+      <workItem from="1589556195751" duration="22000" />
+      <workItem from="1589556230570" duration="13667000" />
     </task>
     <servers />
   </component>
@@ -255,6 +250,10 @@
       <screen x="0" y="22" width="1920" height="1058" />
     </state>
     <state x="769" y="238" key="#com.intellij.ide.util.MemberChooser/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1589471621495" />
+    <state x="707" y="419" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1589526687269">
+      <screen x="0" y="22" width="1920" height="1058" />
+    </state>
+    <state x="707" y="419" key="#com.intellij.ide.util.TreeClassChooserDialog/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1589526687269" />
     <state x="580" y="222" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1589525051863">
       <screen x="0" y="22" width="1920" height="1058" />
     </state>
@@ -271,50 +270,50 @@
       <screen x="0" y="22" width="1920" height="1058" />
     </state>
     <state x="485" y="129" key="CommitChangelistDialog2/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1588230042492" />
-    <state width="454" height="506" key="DebuggerActiveHint" timestamp="1588233462216">
+    <state width="482" height="506" key="DebuggerActiveHint" timestamp="1589713713920">
       <screen x="0" y="22" width="1920" height="1058" />
     </state>
-    <state width="454" height="506" key="DebuggerActiveHint/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1588233462216" />
+    <state width="482" height="506" key="DebuggerActiveHint/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1589713713920" />
     <state x="757" y="384" key="FileChooserDialogImpl" timestamp="1589525360349">
       <screen x="0" y="22" width="1920" height="1058" />
     </state>
     <state x="757" y="384" key="FileChooserDialogImpl/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1589525360349" />
-    <state width="1874" height="282" key="GridCell.Tab.0.bottom" timestamp="1589525557304">
+    <state width="1874" height="348" key="GridCell.Tab.0.bottom" timestamp="1589721991556">
       <screen x="0" y="22" width="1920" height="1058" />
     </state>
-    <state width="1874" height="282" key="GridCell.Tab.0.bottom/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1589525557304" />
-    <state width="1874" height="282" key="GridCell.Tab.0.center" timestamp="1589525557304">
+    <state width="1874" height="348" key="GridCell.Tab.0.bottom/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1589721991556" />
+    <state width="1874" height="348" key="GridCell.Tab.0.center" timestamp="1589721991555">
       <screen x="0" y="22" width="1920" height="1058" />
     </state>
-    <state width="1874" height="282" key="GridCell.Tab.0.center/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1589525557304" />
-    <state width="1874" height="282" key="GridCell.Tab.0.left" timestamp="1589525557304">
+    <state width="1874" height="348" key="GridCell.Tab.0.center/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1589721991555" />
+    <state width="1874" height="348" key="GridCell.Tab.0.left" timestamp="1589721991555">
       <screen x="0" y="22" width="1920" height="1058" />
     </state>
-    <state width="1874" height="282" key="GridCell.Tab.0.left/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1589525557304" />
-    <state width="1874" height="282" key="GridCell.Tab.0.right" timestamp="1589525557304">
+    <state width="1874" height="348" key="GridCell.Tab.0.left/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1589721991555" />
+    <state width="1874" height="348" key="GridCell.Tab.0.right" timestamp="1589721991555">
       <screen x="0" y="22" width="1920" height="1058" />
     </state>
-    <state width="1874" height="282" key="GridCell.Tab.0.right/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1589525557304" />
-    <state width="1874" height="348" key="GridCell.Tab.1.bottom" timestamp="1588923468070">
+    <state width="1874" height="348" key="GridCell.Tab.0.right/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1589721991555" />
+    <state width="1874" height="348" key="GridCell.Tab.1.bottom" timestamp="1589721991556">
       <screen x="0" y="22" width="1920" height="1058" />
     </state>
-    <state width="1874" height="348" key="GridCell.Tab.1.bottom/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1588923468070" />
-    <state width="1874" height="348" key="GridCell.Tab.1.center" timestamp="1588923468070">
+    <state width="1874" height="348" key="GridCell.Tab.1.bottom/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1589721991556" />
+    <state width="1874" height="348" key="GridCell.Tab.1.center" timestamp="1589721991556">
       <screen x="0" y="22" width="1920" height="1058" />
     </state>
-    <state width="1874" height="348" key="GridCell.Tab.1.center/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1588923468070" />
-    <state width="1874" height="348" key="GridCell.Tab.1.left" timestamp="1588923468070">
+    <state width="1874" height="348" key="GridCell.Tab.1.center/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1589721991556" />
+    <state width="1874" height="348" key="GridCell.Tab.1.left" timestamp="1589721991556">
       <screen x="0" y="22" width="1920" height="1058" />
     </state>
-    <state width="1874" height="348" key="GridCell.Tab.1.left/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1588923468070" />
-    <state width="1874" height="348" key="GridCell.Tab.1.right" timestamp="1588923468070">
+    <state width="1874" height="348" key="GridCell.Tab.1.left/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1589721991556" />
+    <state width="1874" height="348" key="GridCell.Tab.1.right" timestamp="1589721991556">
       <screen x="0" y="22" width="1920" height="1058" />
     </state>
-    <state width="1874" height="348" key="GridCell.Tab.1.right/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1588923468070" />
-    <state x="457" y="204" width="1032" height="844" key="SettingsEditor" timestamp="1589525188131">
+    <state width="1874" height="348" key="GridCell.Tab.1.right/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1589721991556" />
+    <state x="457" y="204" width="1032" height="844" key="SettingsEditor" timestamp="1589526729291">
       <screen x="0" y="22" width="1920" height="1058" />
     </state>
-    <state x="457" y="204" width="1032" height="844" key="SettingsEditor/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1589525188131" />
+    <state x="457" y="204" width="1032" height="844" key="SettingsEditor/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1589526729291" />
     <state x="2377" y="186" key="SettingsEditor/0.22.1920.1058/1920.0.1920.1080@1920.0.1920.1080" timestamp="1587713309482" />
     <state x="639" y="378" key="com.intellij.ide.util.TipDialog" timestamp="1588232895081">
       <screen x="0" y="22" width="1920" height="1058" />
@@ -340,9 +339,9 @@
       <screen x="0" y="22" width="1920" height="1058" />
     </state>
     <state x="620" y="253" key="run.anything.popup/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1589297877367" />
-    <state x="623" y="255" width="672" height="678" key="search.everywhere.popup" timestamp="1589469824963">
+    <state x="623" y="255" width="672" height="678" key="search.everywhere.popup" timestamp="1589722141097">
       <screen x="0" y="22" width="1920" height="1058" />
     </state>
-    <state x="623" y="255" width="672" height="678" key="search.everywhere.popup/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1589469824963" />
+    <state x="623" y="255" width="672" height="678" key="search.everywhere.popup/0.22.1920.1058/1920.0.1920.1080@0.22.1920.1058" timestamp="1589722141097" />
   </component>
 </project>

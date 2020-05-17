@@ -9,11 +9,11 @@ public class AsciiService {
         createAsciiModels(this.asciiFigures);
     }
 
-    public AsciiModel getAsciiByProgression(int progresssion) {
-        if (progresssion > 6 || progresssion < 0) {
+    public AsciiModel getAsciiByProgression(int progression) {
+        if (progression > 6 || progression < 0) {
             return null;
         }
-        return asciiModels[progresssion];
+        return asciiModels[progression];
     }
 
 

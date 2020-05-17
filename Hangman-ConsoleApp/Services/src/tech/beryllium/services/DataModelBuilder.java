@@ -29,15 +29,24 @@ public class DataModelBuilder {
         var wrongList = new ArrayList<Character>();
 
         for (var guess: gameDataModel.guesses.split(",")) {
-            if(this._utilityService.charArrayContains(gameDataModel.correctWord.toCharArray(), guess.charAt(0))) {
+            try { guess.charAt(0); } catch (Exception e) { continue; }
+            if(this._utilityService.charArrayContains(gameDataModel.correctWord.toUpperCase().toCharArray(), guess.charAt(0))) {
                 correctList.add(guess.charAt(0));
             } else {
                 wrongList.add(guess.charAt(0));
             }
         }
 
-        _dataModel.correctGuesses = (Character[]) correctList.toArray();
-        _dataModel.wrongGuesses = (Character[]) wrongList.toArray();
+        _dataModel.correctGuesses = characterCollectionToArray(correctList);
+        _dataModel.wrongGuesses = characterCollectionToArray(wrongList);
+    }
+
+    private Character[] characterCollectionToArray(ArrayList<Character> input) {
+        var array = new Character[input.size()];
+        for (var index = 0; index < array.length; index++) {
+            array[index] = input.get(index);
+        }
+        return array;
     }
 
     private boolean objectIsComplete() {
@@ -53,7 +62,7 @@ public class DataModelBuilder {
         sortGuesses(this._gameDataModel);
         calculateGuessNumber(this._gameDataModel);
         createRepresentativeString(this._dataModel, this._gameDataModel);
-        this._dataModel.progression = this._dataModel.wrongGuesses.length - 1;
+        this._dataModel.progression = this._dataModel.wrongGuesses.length;
     }
 
     private void calculateGuessNumber(GameDataModel gameDataModel) {
@@ -70,7 +79,7 @@ public class DataModelBuilder {
         for(int dashIndex = 0; dashIndex < repString.length(); dashIndex++) {
             for (var guess :
                     dataModel.correctGuesses) {
-                if(guess == gameDataModel.correctWord.charAt(dashIndex)) {
+                if(guess == gameDataModel.correctWord.toUpperCase().charAt(dashIndex)) {
                     repString = this._utilityService.replaceCharAtIndex(repString, dashIndex, guess);
                     break;
                 }

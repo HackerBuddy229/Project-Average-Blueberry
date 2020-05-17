@@ -61,7 +61,12 @@ public class Hangman {
     }
 
     public GameDataModel nextTurn(char guess, boolean isHost) throws IOException {
-        this.gameDataModel.guesses = this.gameDataModel.guesses + "," + guess;
+        if (this.gameDataModel.guesses == "" || this.gameDataModel.guesses == null) {
+            this.gameDataModel.guesses = this.gameDataModel.guesses + guess;
+        } else {
+            this.gameDataModel.guesses = this.gameDataModel.guesses + "," + guess;
+        }
+
         if (isHost) {
             this.gameDataModel.turn = 2;
         } else {
@@ -98,8 +103,12 @@ public class Hangman {
         for (var letter : this.gameDataModel.correctWord.toUpperCase().toCharArray()) {
             var contains = false;
             for (var guess : this.gameDataModel.guesses.split(",")) {
-                if (letter == guess.charAt(0)) {
-                    contains = true;
+                try {
+                    if (letter == guess.charAt(0)) {
+                        contains = true;
+                    }
+                } catch (StringIndexOutOfBoundsException exception) {
+                    continue;
                 }
             }
             if (!contains) {

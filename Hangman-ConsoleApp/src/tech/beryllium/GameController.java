@@ -60,20 +60,22 @@ public class GameController {
                 var hangman = new Hangman(this._dataService);
                 PresentRound(hangman.getDataModel());
 
-                if (hangman.getDataModel().progression > 7) {
+                this.currentGameState = this._dataService.getGameDataModel();
+                if (hangman.getDataModel().progression >= 6) {
                     hangman.timeDeath(isHost);
                     GameView.PresentPrompt("You Lose!");
                     break;
+                } else if (this.currentGameState.hasWon == true) {
+                    GameView.PresentPrompt("You Lose!");
+                    break;
                 }
+
 
                 var guess = fetchGuess();
                 this.currentGameState = hangman.nextTurn(guess, this.isHost);
 
                 if (this.currentGameState.hasWon && this.currentGameState.winner == clientDesignation) {
                     GameView.PresentPrompt("Congratulations! you have won");
-                    break;
-                } else if (this.currentGameState.hasWon && this.currentGameState.winner != clientDesignation) {
-                    GameView.PresentPrompt("You Lose!");
                     break;
                 }
             }
@@ -87,7 +89,7 @@ public class GameController {
         String raw;
         do {
             raw = this._gameView.getInput();
-        } while (raw != null);
+        } while (raw == null || raw.equals(""));
 
         return raw.toUpperCase().charAt(0);
     }
@@ -101,14 +103,14 @@ public class GameController {
     private int fetchDifficulty() {
         var prompt = "Please choose your difficulty";
         var options = new ChoiceModel[] {
-          new ChoiceModel("Easy", 1),
-                new ChoiceModel("Moderate", 2),
-                new ChoiceModel("Difficult", 3)
+          new ChoiceModel("Easy", 0),
+                new ChoiceModel("Moderate", 1),
+                new ChoiceModel("Difficult", 2)
         };
         ChoiceModel choice = null;
         do {
-          choice = this._gameView.GetChoice(options, "choose you desired difficulty");
-        } while (choice != null);
+          choice = this._gameView.GetChoice(options, prompt);
+        } while (choice == null);
 
         return choice.getId();
     }
@@ -125,7 +127,7 @@ public class GameController {
             } catch (Exception exception) {
                 response = 0;
             }
-        } while (response != 0);
+        } while (response == 0);
 
         return response;
     }
