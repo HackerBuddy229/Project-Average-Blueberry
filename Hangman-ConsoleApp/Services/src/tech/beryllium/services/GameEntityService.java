@@ -25,10 +25,19 @@ public class GameEntityService {
     };
     private Random _random;
 
+    /**
+     * Instantiates the class with a global random instance
+     * @param random the random instance to be used globally
+     */
     public GameEntityService(Random random) {
         this._random = random;
     }
 
+    /**
+     * fetces a randomly generated word by difficulty specified
+     * @param difficulty the difficulty shall be an integer of -1 < difficulty < 3
+     * @return
+     */
     public String GetGameEntityByDifficulty(int difficulty) {
         switch (difficulty) {
             case 0:
