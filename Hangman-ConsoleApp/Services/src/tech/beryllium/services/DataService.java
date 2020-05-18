@@ -12,7 +12,11 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 public class DataService {
-
+    /**
+     * this constructor sets up the instance with an id so that you can start the stack with getGameDataModel()
+     * @param id the aforementioned id
+     * @throws IOException when network connectivity fails or the id is corrupt leading to a url malformation
+     */
     public DataService(int  id) throws IOException {
         //TODO: verify id
         this.id = id;
@@ -25,6 +29,10 @@ public class DataService {
         this.gson = new Gson();
     }
 
+    /**
+     * instantiate without id meaning you can't begin the stack with getGameDataModel()
+     * @throws MalformedURLException should not occur if not code changes are applied
+     */
     public DataService() throws MalformedURLException {
         this.postUrl = new URL("https://beryllium.tech/api/HangmanGameModels");
         this.gson = new Gson();
@@ -37,6 +45,11 @@ public class DataService {
     private URL postUrl;
     private Gson gson;
 
+    /**
+     * returns a gamedatamodel fetched from the hangmanGameModels api hosted on beryllium.tech
+     * @return an updated gameDataModel
+     * @throws IOException at network connectivity issues or id malformation
+     */
     public GameDataModel getGameDataModel() throws IOException {
 
         if (id == 0) {
@@ -59,6 +72,11 @@ public class DataService {
         return output;
     }
 
+    /**
+     * Gets raw json by the global get url
+     * @return a string consisting of raw json in the form of a gameDataModel
+     * @throws IOException at network connectivity issues of id malformation
+     */
     private String getJsonByURL() throws IOException {
         var getHttpURLConnection = (HttpURLConnection) this.getUrl.openConnection();
         getHttpURLConnection.setRequestMethod("GET");
@@ -77,21 +95,42 @@ public class DataService {
 
     }
 
+    /**
+     * mapps a raw json string to an gamedatamodel instance
+     * @param json raw json in the form of gameDataModel
+     * @return an unsecured instance of the gameDataModel
+     */
     private GameDataModel ToGameDataModel(String json) {
         GameDataModel output = this.gson.fromJson(json, GameDataModel.class);
         return output;
     }
 
+    /**
+     * mapps an instance of the gameModel to raw json
+     * @param gameModel the gameModel to be mapped
+     * @return a string of raw json representing an gamemodel object
+     */
     private String gameModelToJson(GameModel gameModel) {
         String rawJson = this.gson.toJson(gameModel);
         return rawJson;
     }
 
+    /**
+     * maps an instance of the gameDataModel to raw json
+     * @param gameModel the gameDataModel to be mapped
+     * @return a string of raw json representing an gamedatamodel object
+     */
     private String gameDataModelToJson(GameDataModel gameModel) {
         String rawJson = this.gson.toJson(gameModel);
         return rawJson;
     }
 
+    /**
+     * Creates a post request and executes it, sendig raw json to the REST api
+     * @param json the raw json sent
+     * @return  raw json representing the gameDataModel
+     * @throws IOException on network connectivity or general http errors
+     */
     private String postJson(String json) throws IOException {
         var connection = (HttpURLConnection) this.postUrl.openConnection();
         connection.setRequestMethod("POST");
@@ -118,6 +157,12 @@ public class DataService {
 
     }
 
+    /**
+     * Creates a put request and executes it, sendig raw json to the REST api
+     * @param json the raw json sent
+     * @return  raw json representing the gameDataModel
+     * @throws IOException on network connectivity or general http errors
+     */
     private String putJson(String json) throws IOException {
         var connection = (HttpURLConnection) this.getUrl.openConnection();
         connection.setRequestMethod("PUT");
@@ -141,6 +186,13 @@ public class DataService {
         return response.toString();
     }
 
+    /**
+     * general purpose publicly accessible method to send and receive an gamedatamodel to the rest api.
+     * can automatically determine weather or not an Put or Post is necessary
+     * @param gameModel the GameDataModel to be sent
+     * @return returns the updated GameDataModel
+     * @throws IOException on network connectivity issues or general http errors
+     */
     public GameDataModel postGameModel(GameDataModel gameModel) throws IOException {
 
         //to json

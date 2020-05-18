@@ -11,11 +11,18 @@ public class DataModelBuilder {
 
     private UtilityService _utilityService;
 
+    /**
+     * uses a gamedatamodel to create a wready to write instance
+     * @param gameDataModel a not null gamedatamodel
+     */
     public DataModelBuilder(GameDataModel gameDataModel) {
         this._gameDataModel = gameDataModel;
         this._utilityService = new UtilityService();
     }
 
+    /**
+     * creates an instance in need of a gamedatamodel to be able to write
+     */
     public DataModelBuilder() {
         this._utilityService = new UtilityService();
     }
@@ -24,6 +31,10 @@ public class DataModelBuilder {
         this._gameDataModel = _gameDataModel;
     }
 
+    /**
+     * Sorts the guesses contained in the gamedatamodel into two arrays differed by their relation to the correct word
+     * @param gameDataModel the aforementioned gamedatamodel
+     */
     private void sortGuesses(GameDataModel gameDataModel) {
         var correctList = new ArrayList<Character>();
         var wrongList = new ArrayList<Character>();
@@ -41,6 +52,12 @@ public class DataModelBuilder {
         _dataModel.wrongGuesses = characterCollectionToArray(wrongList);
     }
 
+    /**
+     * A really stupid and slow meathod that converts a Character arraylist to a character array
+     * since java is a bad programming language
+     * @param input the arraylist of characters
+     * @return the mapped array representing the arraylist
+     */
     private Character[] characterCollectionToArray(ArrayList<Character> input) {
         var array = new Character[input.size()];
         for (var index = 0; index < array.length; index++) {
@@ -49,6 +66,10 @@ public class DataModelBuilder {
         return array;
     }
 
+    /**
+     * Checks weather or not the current instance is ready to write a DataModel
+     * @return weather or not the current instance is ready
+     */
     private boolean objectIsComplete() {
         if (this._gameDataModel == null || this._dataModel == null) {
             return false;
@@ -56,6 +77,10 @@ public class DataModelBuilder {
         return true;
     }
 
+    /**
+     * The first step of the writeDataModel() both instanciates the global datamodel
+     * but also uses the global gamedatamodel to calculate the contained values of the dataModel
+     */
     private void CreateDataModel() {
         this._dataModel = new DataModel();
 
@@ -65,10 +90,21 @@ public class DataModelBuilder {
         this._dataModel.progression = this._dataModel.wrongGuesses.length;
     }
 
+    /**
+     * Calculates the amount of guesses that has been made
+     * !Is deprecated(Not in use)
+     * @param gameDataModel the global gamedatamodel should be used to calculate the amount of guesses made
+     */
     private void calculateGuessNumber(GameDataModel gameDataModel) {
         _dataModel.guess = gameDataModel.guesses.split(",").length;
     }
 
+    /**
+     * Creates a representative string of the current guessing progress, in which not yet guessed characters take
+     * the place of "-":s
+     * @param dataModel the global data model is used to handle only the correct guesses to save time
+     * @param gameDataModel the global gamedatamodel should be used to fetch the correct word
+     */
     private void createRepresentativeString(DataModel dataModel, GameDataModel gameDataModel) {
         var dash = new StringBuilder();
         for (int i = 0; i < gameDataModel.correctWord.length(); i++) {
@@ -89,7 +125,10 @@ public class DataModelBuilder {
         this._dataModel.representativeString = repString;
     }
 
-
+    /**
+     * executes the writeDataModel() chain and checks it's validity before returning the product
+     * @return the produced DataModel
+     */
     public DataModel writeDataModel() {
 
         CreateDataModel();
