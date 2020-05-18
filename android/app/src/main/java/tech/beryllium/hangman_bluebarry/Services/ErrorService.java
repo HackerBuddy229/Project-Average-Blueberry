@@ -4,6 +4,8 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
 
+import tech.beryllium.hangman_bluebarry.MainActivity;
+
 public class ErrorService {
     public static void displayNetworkError (Context context, String errorMessage) {
         AlertDialog.Builder builder = new AlertDialog.Builder(context);

@@ -14,8 +14,8 @@ public class GameView extends UtilityView {
      *
      * @param asciiModel the aforementioned ascii model
      */
-    public static void printAscii(AsciiModel asciiModel) {
-        System.out.println(asciiModel.getAsciiArt());
+    public void printAscii(AsciiModel asciiModel) {
+        super.mainActivityModel.ascii.setText(asciiModel.getAsciiArt());
     }
 
     /**
@@ -23,20 +23,27 @@ public class GameView extends UtilityView {
      *
      * @param dataModel the datamodel from which the information is fetched
      */
-    public static void printRoundStats(DataModel dataModel) {
-        System.out.println("Representative String: " + dataModel.representativeString);
-        System.out.println("Correct guesses");
+    public void printRoundStats(DataModel dataModel) {
+        StringBuilder output = new StringBuilder();
+
+        output.append("Representative String: " + dataModel.representativeString + "\n");
+
+        output.append("Correct guesses: ");
         for (char guess :
                 dataModel.correctGuesses) {
-            System.out.print(guess);
+            output.append(guess + ", ");
         }
-        System.out.println();
-        System.out.println("Wrong guesses");
+        output.append("\n");
+        output.append("Wrong guesses");
         for (char guess :
                 dataModel.wrongGuesses) {
-            System.out.print(guess);
+            output.append(guess + ", ");
         }
-        System.out.println();
+        output.append("\n");
+
+        super.mainActivityModel.stats.setText(output.toString());
     }
+
+
 }
 

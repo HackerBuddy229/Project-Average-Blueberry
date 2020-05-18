@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.util.Random;
 
+import tech.beryllium.hangman_bluebarry.MainActivity;
 import tech.beryllium.hangman_bluebarry.Services.AsciiService;
 import tech.beryllium.hangman_bluebarry.Services.DataService;
 import tech.beryllium.hangman_bluebarry.Services.ErrorService;
@@ -31,15 +32,18 @@ public class GameController {
         private GameDataModel currentGameState;
         private MainActivityModel _mainActivityModel;
 
-        private Context context;
+        private MainActivity mainActivity;
+        private Boolean valid = true;
+
+        private Hangman roundHangman;
 
         /**
          * instantiates a new instance with a global GameView
          */
-        public GameController(Context context, MainActivityModel mainActivityModel) {
+        public GameController(MainActivity mainActivity, MainActivityModel mainActivityModel) {
             this._mainActivityModel = mainActivityModel;
             this._gameView = new GameView(this._mainActivityModel);
-            this.context = context;
+            this.mainActivity = mainActivity;
         }
 
 
@@ -48,10 +52,11 @@ public class GameController {
          * startGame() method call
          * @throws Exception see nested javadoc
          */
-        public void setupGame() throws Exception {
+        public void setupGame() {
             doJoinGame();
 
         }
+
         private void ifHostGame() {
             try {
                 this.isHost = true;
@@ -59,10 +64,11 @@ public class GameController {
 
                 fetchDifficulty();
             } catch (Exception e) {
-                ErrorService.displayNetworkError(this.context, e.getMessage());
+                ErrorService.displayNetworkError(this.mainActivity, e.getMessage());
             }
 
         }
+
         private void setDifficulty(int difficulty) {
             try {
                 this._dataService = new DataService();
@@ -70,26 +76,36 @@ public class GameController {
                 this.currentGameState = GameData;
                 this._gameView.PresentPrompt("your id is:" + this.currentGameState.id);
             } catch (Exception e) {
-                ErrorService.displayNetworkError(this.context, e.getMessage());
+                ErrorService.displayNetworkError(this.mainActivity, e.getMessage());
             }
 
 
         }
+
         private void ifJoinGame() {
             try {
                 this.isHost = false;
                 this.clientDesignation = 2;
-                int id = fetchId();
+                fetchId();
+
+            } catch (Exception e) {
+                ErrorService.displayNetworkError(this.mainActivity, e.getMessage());
+            }
+
+        }
+
+        private void ifJoinSetId(int id) {
+            try {
                 this._dataService = new DataService(id);
                 GameDataModel game = Hangman.joinGame(this._dataService);
                 if (game == null) {
-                    throw new Exception("id was wrong");
+                    throw new IOException("id was wrong");
                 }
 
                 this.currentGameState = game;
                 this._gameView.PresentPrompt("your id is:" + this.currentGameState.id);
-            } catch (Exception e) {
-                ErrorService.displayNetworkError(this.context, e.getMessage());
+            } catch (IOException e) {
+                ErrorService.displayNetworkError(this.mainActivity, e.getMessage());
             }
 
         }
@@ -98,39 +114,56 @@ public class GameController {
          * primary execution chain starting and maintaining the game until finished
          * @throws IOException general network errors
          */
-        public void startGame() throws IOException {
-            while(!this.currentGameState.hasWon) {
+        public void iterateGame() throws IOException {
+
+            if (valid) {
                 if(Hangman.isClientTurn(this._dataService, this.clientDesignation)) {
 
-                    Hangman hangman = new Hangman(this._dataService);
-                    PresentRound(hangman.getDataModel());
+                    this.roundHangman = new Hangman(this._dataService);
+                    PresentRound(roundHangman.getDataModel());
 
                     this.currentGameState = this._dataService.getGameDataModel();
-                    if (hangman.getDataModel().progression >= 6) {
-                        hangman.timeDeath(isHost);
+                    if (roundHangman.getDataModel().progression >= 6) {
+                        roundHangman.timeDeath(isHost);
                         promptLoss(true);
-                        break;
+                        this.valid = false;
+                        return;
                     } else if (this.currentGameState.hasWon == true) {
                         promptLoss(false);
-                        break;
+                        this.valid = false;
+                        return;
                     }
 
 
-                    char guess = fetchGuess();
-                    this.currentGameState = hangman.nextTurn(guess, this.isHost);
-
-                    if (this.currentGameState.hasWon && this.currentGameState.winner == clientDesignation) {
-                        promptWin();
-                        break;
-                    }
+                    fetchGuess();
                 }
-                this._gameView.PresentPrompt("Press Refresh");
-                this._gameView.awaitInput();
             }
+
+
+
+        }
+
+        private void doGuess() {
+            try {
+                this._mainActivityModel.submit.setOnClickListener(null);
+                char guess = this._mainActivityModel.guess.getText().toString().toUpperCase().charAt(0);
+                this.currentGameState = roundHangman.nextTurn(guess, this.isHost);
+                this._mainActivityModel.hints.setText("Please refresh until the other player is finished");
+                this._mainActivityModel.guess.setText("");
+
+                if (this.currentGameState.hasWon && this.currentGameState.winner == clientDesignation) {
+                    promptWin();
+                    this.valid = false;
+                    return;
+                }
+            } catch (Exception e) {
+                ErrorService.displayNetworkError(this.mainActivity, e.getMessage());
+            }
+
         }
 
         private void promptLoss(boolean byTime) {
-            AlertDialog.Builder builder = new AlertDialog.Builder(this.context);
+            AlertDialog.Builder builder = new AlertDialog.Builder(this.mainActivity);
             if (byTime) {
                 builder.setTitle("Time!");
                 builder.setMessage("You ran out of guesses.");
@@ -142,7 +175,7 @@ public class GameController {
         }
 
     private void promptWin() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this.context);
+        AlertDialog.Builder builder = new AlertDialog.Builder(this.mainActivity);
 
             builder.setTitle("Yay");
             builder.setMessage("You have won!");
@@ -154,14 +187,15 @@ public class GameController {
          * query and accepts the players guess
          * @return secured guess as char
          */
-        private char fetchGuess() {
-            this._gameView.PresentPrompt("Please enter your guess and press enter:");
-            String raw;
-            do {
-                raw = this._gameView.getInput();
-            } while (raw == null || raw.equals(""));
+        private void fetchGuess() {
+            this._gameView.PresentPrompt("Please enter your guess and press submit:");
 
-            return raw.toUpperCase().charAt(0);
+            this._mainActivityModel.submit.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    doGuess();
+                }
+            });
         }
 
         /**
@@ -169,9 +203,9 @@ public class GameController {
          * @param dataModel the datamodel extracted from hangman
          */
         private void PresentRound(DataModel dataModel) {
-            GameView.printAscii(new AsciiService()
+            this._gameView.printAscii(new AsciiService()
                     .getAsciiByProgression(dataModel.progression));
-            GameView.printRoundStats(dataModel);
+            this._gameView.printRoundStats(dataModel);
         }
 
         /**
@@ -196,7 +230,7 @@ public class GameController {
                     "Moderate",
                     "Difficult"
             };
-            AlertDialog.Builder builder = new AlertDialog.Builder(this.context);
+            AlertDialog.Builder builder = new AlertDialog.Builder(this.mainActivity);
             builder.setTitle("Select Difficulty");
             builder.setItems(options, new DialogInterface.OnClickListener() {
                 @Override
@@ -204,6 +238,7 @@ public class GameController {
                     setDifficulty(index);
                 }
             });
+            builder.create().show();
 
         }
 
@@ -211,8 +246,8 @@ public class GameController {
          * query and accepts the players session id
          * @return the id as an integer
          */
-        private int fetchId() {
-            String prompt = "Please enter game id:";
+        private void fetchId() {
+            /*String prompt = "Please enter game id:";
             this._gameView.PresentPrompt(prompt);
 
             int response;
@@ -225,7 +260,22 @@ public class GameController {
                 }
             } while (response == 0);
 
-            return response;
+            return response;*/
+
+            String prompt = "Please enter game id:";
+            this._gameView.PresentPrompt(prompt);
+
+            this._mainActivityModel.submit.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    _mainActivityModel.submit.setOnClickListener(null);
+                    try {
+                        ifJoinSetId(Integer.parseInt(_mainActivityModel.guess.getText().toString()));
+                    } catch (Exception e) {
+                        ErrorService.displayNetworkError(mainActivity, "Id malformation error");
+                    }
+                }
+            });
         }
 
         /**
@@ -254,7 +304,7 @@ public class GameController {
                     "Join"
             };
 
-            AlertDialog.Builder builder = new AlertDialog.Builder(this.context);
+            AlertDialog.Builder builder = new AlertDialog.Builder(this.mainActivity);
             builder.setTitle("Create or Join?");
             builder.setItems(options, new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int index) {
@@ -268,7 +318,7 @@ public class GameController {
 
                 }
             });
-
+            builder.create().show();
 
         }
     }

@@ -140,6 +140,7 @@ public class DataService {
         connection.setDoOutput(true);
 
         byte[] jsonBytes = json.getBytes("utf-8");
+
         connection.getOutputStream().write(jsonBytes, 0, jsonBytes.length);
 
         BufferedReader buffredReader = new BufferedReader(
