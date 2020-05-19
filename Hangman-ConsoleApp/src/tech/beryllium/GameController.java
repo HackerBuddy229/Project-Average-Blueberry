@@ -46,7 +46,7 @@ public class GameController {
             }
 
             this.currentGameState = game;
-            GameView.PresentPrompt("your id is:" + this.currentGameState.id);
+            GameView.presentPrompt("your id is:" + this.currentGameState.id);
             return;
         }
         this.isHost = true;
@@ -57,7 +57,7 @@ public class GameController {
 
         var GameData = Hangman.createGame(_dataService, new GameEntityService(new Random()), difficulty);
         this.currentGameState = GameData;
-        GameView.PresentPrompt("your id is:" + this.currentGameState.id);
+        GameView.presentPrompt("your id is:" + this.currentGameState.id);
     }
 
     /**
@@ -69,15 +69,15 @@ public class GameController {
             if(Hangman.isClientTurn(this._dataService, this.clientDesignation)) {
 
                 var hangman = new Hangman(this._dataService);
-                PresentRound(hangman.getDataModel());
+                presentRound(hangman.getDataModel());
 
                 this.currentGameState = this._dataService.getGameDataModel();
                 if (hangman.getDataModel().progression >= 6) {
                     hangman.timeDeath(isHost);
-                    GameView.PresentPrompt("You Lose!");
+                    GameView.presentPrompt("You Lose!");
                     break;
                 } else if (this.currentGameState.hasWon == true) {
-                    GameView.PresentPrompt("You Lose!");
+                    GameView.presentPrompt("You Lose!");
                     break;
                 }
 
@@ -86,11 +86,11 @@ public class GameController {
                 this.currentGameState = hangman.nextTurn(guess, this.isHost);
 
                 if (this.currentGameState.hasWon && this.currentGameState.winner == clientDesignation) {
-                    GameView.PresentPrompt("Congratulations! you have won");
+                    GameView.presentPrompt("Congratulations! you have won");
                     break;
                 }
             }
-            UtilityView.PresentPrompt("Press enter to refresh");
+            UtilityView.presentPrompt("Press enter to refresh");
             this._gameView.awaitInput();
         }
     }
@@ -100,7 +100,7 @@ public class GameController {
      * @return secured guess as char
      */
     private char fetchGuess() {
-        GameView.PresentPrompt("Please enter your guess and press enter:");
+        GameView.presentPrompt("Please enter your guess and press enter:");
         String raw;
         do {
             raw = this._gameView.getInput();
@@ -113,7 +113,7 @@ public class GameController {
      * Uses the dataModel provided by hangman to present relevant information to the player
      * @param dataModel the datamodel extracted from hangman
      */
-    private void PresentRound(DataModel dataModel) {
+    private void presentRound(DataModel dataModel) {
         GameView.printAscii(new AsciiService()
                             .getAsciiByProgression(dataModel.progression));
         GameView.printRoundStats(dataModel);
@@ -132,7 +132,7 @@ public class GameController {
         };
         ChoiceModel choice = null;
         do {
-          choice = this._gameView.GetChoice(options, prompt);
+          choice = this._gameView.getChoice(options, prompt);
         } while (choice == null);
 
         return choice.getId();
@@ -144,7 +144,7 @@ public class GameController {
      */
     private int fetchId() {
         var prompt = "Please enter game id:";
-        this._gameView.PresentPrompt(prompt);
+        this._gameView.presentPrompt(prompt);
 
         int response;
         do {
@@ -172,7 +172,7 @@ public class GameController {
 
         ChoiceModel input;
         do {
-            input = _gameView.GetChoice(choices, prompt);
+            input = _gameView.getChoice(choices, prompt);
         } while (input == null);
 
         if (input.getId() == 0) {

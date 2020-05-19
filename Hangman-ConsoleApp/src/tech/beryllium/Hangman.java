@@ -2,7 +2,6 @@ package tech.beryllium;
 
 import tech.beryllium.models.DataModel;
 import tech.beryllium.models.GameDataModel;
-import tech.beryllium.models.GameModel;
 import tech.beryllium.services.DataModelBuilder;
 import tech.beryllium.services.DataService;
 import tech.beryllium.services.GameEntityService;
@@ -68,7 +67,7 @@ public class Hangman {
         var newGame = new GameDataModel();
         newGame = initNewDataModel(newGame);
 
-        newGame.correctWord = gameEntityService.GetGameEntityByDifficulty(difficulty);
+        newGame.correctWord = gameEntityService.getGameEntityByDifficulty(difficulty);
 
         dataService.postGameModel(newGame);
         return dataService.getGameDataModel();

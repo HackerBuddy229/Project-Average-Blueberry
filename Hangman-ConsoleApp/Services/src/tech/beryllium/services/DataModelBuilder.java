@@ -81,7 +81,7 @@ public class DataModelBuilder {
      * The first step of the writeDataModel() both instanciates the global datamodel
      * but also uses the global gamedatamodel to calculate the contained values of the dataModel
      */
-    private void CreateDataModel() {
+    private void createDataModel() {
         this._dataModel = new DataModel();
 
         sortGuesses(this._gameDataModel);
@@ -131,7 +131,7 @@ public class DataModelBuilder {
      */
     public DataModel writeDataModel() {
 
-        CreateDataModel();
+        createDataModel();
         //create dataModel private
         if (!objectIsComplete()) {
             return null;

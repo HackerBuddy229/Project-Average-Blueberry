@@ -11,7 +11,7 @@ class GameEntityServiceShould {
     @Test
     void getGameEntityByDifficulty() {
         var service = new GameEntityService(new Random());
-        var word = service.GetGameEntityByDifficulty(0);
+        var word = service.getGameEntityByDifficulty(0);
         assertEquals(4, word.length());
     }
 }
