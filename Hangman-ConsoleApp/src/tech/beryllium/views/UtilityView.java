@@ -22,11 +22,11 @@ public class UtilityView {
      * @param prompt The prompt to be presented to the player
      * @return the selected choice(unsecured)
      */
-    public ChoiceModel GetChoice(ChoiceModel[] options, String prompt) {
-        PresentPrompt(prompt);
+    public ChoiceModel getChoice(ChoiceModel[] options, String prompt) {
+        presentPrompt(prompt);
 
         for (var choice : options) {
-            PresentPrompt(Integer.toString(choice.getId()) + ". " + choice.getChoise());
+            presentPrompt(Integer.toString(choice.getId()) + ". " + choice.getChoise());
         }
         try {
             var selection = scanner.nextInt();
@@ -42,7 +42,7 @@ public class UtilityView {
      * prints a prompt to the console along with a "\n" character
      * @param prompt the prompt to be presented to the client
      */
-    public static void PresentPrompt(String prompt) {
+    public static void presentPrompt(String prompt) {
         System.out.println(prompt);
     }
 
@@ -59,5 +59,9 @@ public class UtilityView {
      */
     public void awaitInput() {
         scanner.nextLine();
+    }
+
+    public static void breakLine() {
+        System.out.println("");
     }
 }

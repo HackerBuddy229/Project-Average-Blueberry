@@ -64,7 +64,7 @@ public class DataService {
 
 
         //json
-        var output = ToGameDataModel(rawJson);
+        var output = toGameDataModel(rawJson);
 
 
 
@@ -100,7 +100,7 @@ public class DataService {
      * @param json raw json in the form of gameDataModel
      * @return an unsecured instance of the gameDataModel
      */
-    private GameDataModel ToGameDataModel(String json) {
+    private GameDataModel toGameDataModel(String json) {
         GameDataModel output = this.gson.fromJson(json, GameDataModel.class);
         return output;
     }
@@ -205,7 +205,7 @@ public class DataService {
         //post
         GameDataModel returnModel = new GameDataModel();
         if (response != null || response != "") {
-            returnModel = ToGameDataModel(response);
+            returnModel = toGameDataModel(response);
         }
 
         if (id == 0) {

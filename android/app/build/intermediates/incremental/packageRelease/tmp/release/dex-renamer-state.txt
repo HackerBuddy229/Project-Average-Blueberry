@@ -1,0 +1,4 @@
+#Mon May 18 21:22:21 CEST 2020
+base.0=/home/hackerbuddy/repos/Project-Average-Blueberry/android/app/build/intermediates/dex/release/out/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

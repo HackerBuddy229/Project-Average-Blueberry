@@ -38,7 +38,7 @@ public class GameEntityService {
      * @param difficulty the difficulty shall be an integer of -1 < difficulty < 3
      * @return
      */
-    public String GetGameEntityByDifficulty(int difficulty) {
+    public String getGameEntityByDifficulty(int difficulty) {
         switch (difficulty) {
             case 0:
                 return EasyWords[this._random.nextInt(EasyWords.length-1)];
