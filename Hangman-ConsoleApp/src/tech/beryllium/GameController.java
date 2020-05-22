@@ -35,6 +35,7 @@ public class GameController {
      * @throws Exception see nested javadoc
      */
     public void setupGame() throws Exception {
+        PrintIntro();
         if (doJoinGame()) {
             this.isHost = false;
             this.clientDesignation = 2;
@@ -42,11 +43,11 @@ public class GameController {
             this._dataService = new DataService(id);
             var game = Hangman.joinGame(this._dataService);
             if (game == null) {
-                throw new Exception("id was wrong");
+                throw new Exception("Game-Key was wrong");
             }
 
             this.currentGameState = game;
-            GameView.presentPrompt("your id is:" + this.currentGameState.id);
+            GameView.presentPrompt("your Game-Key is:" + this.currentGameState.id);
             return;
         }
         this.isHost = true;
@@ -57,7 +58,15 @@ public class GameController {
 
         var GameData = Hangman.createGame(_dataService, new GameEntityService(new Random()), difficulty);
         this.currentGameState = GameData;
-        GameView.presentPrompt("your id is:" + this.currentGameState.id);
+        GameView.presentPrompt("your Game-Key is:" + this.currentGameState.id);
+        GameView.presentPrompt("Please refresh until a second player has joined...");
+    }
+
+    private void PrintIntro() {
+        GameView.presentPrompt("Hangman console app");
+        GameView.presentPrompt("by Rasmus Bengtsson and Beryllim Tech");
+        GameView.breakLine();
+        GameView.presentPrompt("please Setup your game according to the following guide...");
     }
 
     /**
@@ -89,6 +98,8 @@ public class GameController {
                     GameView.presentPrompt("Congratulations! you have won");
                     break;
                 }
+
+                GameView.presentPrompt("Please refresh until your opponent is finished...");
             }
             UtilityView.presentPrompt("Press enter to refresh");
             this._gameView.awaitInput();
@@ -114,6 +125,7 @@ public class GameController {
      * @param dataModel the datamodel extracted from hangman
      */
     private void presentRound(DataModel dataModel) {
+        GameView.printRound(dataModel.guess);
         GameView.printAscii(new AsciiService()
                             .getAsciiByProgression(dataModel.progression));
         GameView.printRoundStats(dataModel);
@@ -126,9 +138,9 @@ public class GameController {
     private int fetchDifficulty() {
         var prompt = "Please choose your difficulty";
         var options = new ChoiceModel[] {
-          new ChoiceModel("Easy", 0),
-                new ChoiceModel("Moderate", 1),
-                new ChoiceModel("Difficult", 2)
+          new ChoiceModel("Easy(4-5 Characters)", 0),
+                new ChoiceModel("Moderate(5 Characters)", 1),
+                new ChoiceModel("Difficult(6+ Characters)", 2)
         };
         ChoiceModel choice = null;
         do {
@@ -143,7 +155,7 @@ public class GameController {
      * @return the id as an integer
      */
     private int fetchId() {
-        var prompt = "Please enter game id:";
+        var prompt = "Please enter the Game-Key of the game you want to join:";
         this._gameView.presentPrompt(prompt);
 
         int response;

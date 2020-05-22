@@ -60,4 +60,8 @@ public class UtilityView {
     public void awaitInput() {
         scanner.nextLine();
     }
+
+    public static void breakLine() {
+        System.out.println("");
+    }
 }
